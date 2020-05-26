@@ -44,5 +44,12 @@ leftMenu.addEventListener("click", event => {
  //закрытие модальное окно
 
  modal.addEventListener("click", event => {
-     if(event.target.classList)
- })
+
+     if(event.target.closest(".cross") ||
+        event.target.classList.contains("modal")) {
+document.body.style.overflow = "";
+modal.classList.add("hide");
+     }
+ });
+
+ 
