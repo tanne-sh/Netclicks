@@ -1,6 +1,8 @@
 //меню
 const leftMenu = document.querySelector(".left-menu");
 const hamburger = document.querySelector(".hamburger");
+const tvShowsList = document.querySelector(".tv-shows__list");
+modal = document.querySelector(".modal");
 
 //открытие-закрытие меню
 
@@ -26,4 +28,21 @@ leftMenu.addEventListener("click", event => {
         hamburger.classList.add("open");
     }
 });
+//открытие модальное окно
 
+ tvShowsList.addEventListener("click", event => {
+     const target = event.target;
+     const card = target.closest(".tv-card")
+      
+     if(card){
+         document.body.style.overflow = "hidden";
+         modal.classList.remove( "hide");
+     }
+     
+     
+ });
+ //закрытие модальное окно
+
+ modal.addEventListener("click", event => {
+     if(event.target.classList)
+ })
